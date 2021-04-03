@@ -12,7 +12,8 @@ struct SettingsView: View {
     @EnvironmentObject var model:PersonModel
     
     var body: some View {
-        Text("Settings View")
+        
+        Text("Settings View Temporary Text")
     }
 }
 
