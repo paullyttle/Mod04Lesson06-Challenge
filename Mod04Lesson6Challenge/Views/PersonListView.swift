@@ -16,13 +16,49 @@ struct PersonListView: View {
        List(model.persons) { r in
             
             // MARK: Row item
-            VStack {
-                Text(r.name)
-                Text(r.address)
-                Text(r.company)
-                Text(String(r.yearsOfExperience))
-            }            
+        HStack {
+            // Field labels
+            VStack(alignment: .leading) {
+                if model.showName {
+                    Text("Name: ")
+                        .fontWeight(.bold)
+                }
+                if model.showAddress {
+                Text("Address: ")
+                    .fontWeight(.bold)
+                    
+                }
+                if model.showCompany {
+                Text("Company: ")
+                    .fontWeight(.bold)
+                }
+                if model.showYears {
+                Text("Years' experience: ")
+                    .fontWeight(.bold)
+                }
+            }
+            // Person fields
+            VStack(alignment: .leading) {
+                if model.showName {
+                    Text(r.name)
+                    
+                }
+                if model.showAddress {
+                    Text(r.address)
+                    
+                }
+                if model.showCompany {
+                    Text( r.company)
+                    
+                }
+                if model.showYears {
+                    Text(String(r.yearsOfExperience))
+                    
+                }
+            }
         }
+        
+       }
     }
 }
 

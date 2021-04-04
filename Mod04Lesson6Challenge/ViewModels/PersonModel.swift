@@ -10,6 +10,10 @@ import Foundation
 class PersonModel: ObservableObject {
     
     @Published var persons = [Person]()
+    @Published var showName = true
+    @Published var showAddress = true
+    @Published var showCompany = true
+    @Published var showYears = true
     
     init() {
         persons.append(Person(name: "Joe Johnson", address: "42 Ingleberry", company: "Apple", yearsOfExperience: 42))
